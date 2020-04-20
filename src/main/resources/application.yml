@@ -1,19 +1,26 @@
 spring:
+  profiles: 
+    active: default
+
+  datasource:
+    url: "jdbc:mysql://mysql.cargotracker-db:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+    username: routingmsdb
+    password: routingmsdb
+  rabbitmq:
+    host: rabbitmq-headless.cargotracker-mq
+    port: 5672
+    username: guest
+    password: guest  
+
   application:
-    name: "${IMAGE_NAME:template-spring-boot}"
-
-hello:
-  pattern: "Hello there, %s!"
-
-greetingservice:
-  beanName: "hola"
+    name: "${IMAGE_NAME:template-spring-boot}"    
 
 swagger:
   baseApiPackage:
-  - "com.ibm.hello"
+  - "com.cargotracker"
   - "com.ibm.health"
-  title: "${IMAGE_NAME:template-spring-boot}"
-  description: "Description"
+  title: "cargo-routing-service"
+  description: "cargo-routing-service"
   version: "1.0.0"
   termsOfServiceUrl: ""
 
@@ -28,12 +35,11 @@ management:
         include: "*"
 
 server:
-  port: ${PORT:9080}
+  port: ${PORT:8003}
 
 logging:
   level:
     ROOT: ${LOG_LEVEL:INFO}
-    com.ibm.hello: DEBUG
     com.ibm.cloud_garage: DEBUG
     org.springframework: ERROR
     org.springframework.web: WARN

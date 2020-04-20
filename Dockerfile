@@ -10,6 +10,6 @@ RUN dnf install -y java-11-openjdk.x86_64
 
 COPY --from=builder /home/gradle/build/libs/server.jar ./server.jar
 
-EXPOSE 9080/tcp
+EXPOSE 8003/tcp
 
 CMD ["java", "-jar", "./server.jar"]
