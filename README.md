@@ -15,11 +15,9 @@
 </p>
 
 
-# Java Spring microservice
+# Cargotracker Routing Service
 
-In this sample application, you will create a basic Java web application using Spring. This provides a starting point for creating Java microservice applications running on [Spring](https://spring.io/). It contains no default application code, but comes with standard best practices, including a health check and application metric monitoring.
-
-Capabilities are provided through dependencies in the `pom.xml` file. The ports are set to the defaults of `8080` for http and `8443` for https and are exposed to the CLI in the `cli-config.yml` file. The ports are set in the `pom.xml` file and exposed to the CLI in the `cli-config.yml` file.
+This microservice routes the package once booked.
 
 ## Steps
 
