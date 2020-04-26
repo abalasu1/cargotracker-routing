@@ -3,7 +3,7 @@ spring:
     active: default
 
   datasource:
-    url: "jdbc:mysql://mysql.cargotracker-db:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+    url: "jdbc:mysql://cargotracker-routing.cargotracker-db:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
     username: routingmsdb
     password: routingmsdb
   rabbitmq:
