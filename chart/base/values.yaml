@@ -37,11 +37,11 @@ ingress:
 #  tlsSecretName: ""
 
 vcsInfo:
-  repoUrl: ""
-  branch: ""
+  repoUrl: "https://github.com/abalasu1/cargotracker-routing.git"
+  branch: "master"
 
-partOf: "cargotracker"
+partOf: "cargotracker-backend"
 
-connectsTo: ""
+connectsTo: "routing-db"
 
 runtime: spring

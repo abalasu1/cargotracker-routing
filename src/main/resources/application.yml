@@ -3,11 +3,11 @@ spring:
     active: default
 
   datasource:
-    url: "jdbc:mysql://routing-db-svc.cargotracker-routing:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+    url: "jdbc:mysql://routing-db-svc:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
     username: routingmsdb
     password: routingmsdb
   rabbitmq:
-    host: rabbitmq-headless.cargotracker-mq
+    host: rabbitmq-headless
     port: 5672
     username: guest
     password: guest  
