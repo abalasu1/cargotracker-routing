@@ -27,14 +27,6 @@ insert voyage (Id,voyage_number) values(3,'0100S');
 insert voyage (Id,voyage_number) values(4,'0101S');
 insert voyage (Id,voyage_number) values(5,'0102S');
 
-INSERT INTO `voyage` (`Id`, `voyage_number`) VALUES ('6', '0103S');
-INSERT INTO `voyage` (`Id`, `voyage_number`) VALUES ('7', '0104S');
-INSERT INTO `voyage` (`Id`, `voyage_number`) VALUES ('8', '0105S');
-
-insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) 		values (1355,'CNHGH','CNHKG',3,'2019-08-28','2019-08-25');
-insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) 		values (1356,'JNTKO','CNHGH',4,'2019-09-10','2019-09-01');
-insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) 		values (1357,'USNYC','JNTKO',5,'2019-09-25','2019-09-15');  
-
-INSERT INTO `carrier_movement` (`Id`, `arrival_location_id`, `departure_location_id`, `voyage_id`, `arrival_date`, `departure_date`) VALUES ('1358', 'USNYC', 'JNTKO', '6', '2020-01-15', '2020-01-18');
-INSERT INTO `carrier_movement` (`Id`, `arrival_location_id`, `departure_location_id`, `voyage_id`, `arrival_date`, `departure_date`) VALUES ('1359', 'JNTKO', 'CNHGH', '7', '2020-01-19', '2020-01-22');
-INSERT INTO `carrier_movement` (`Id`, `arrival_location_id`, `departure_location_id`, `voyage_id`, `arrival_date`, `departure_date`) VALUES ('1360', 'CNHGH', 'CNHKG', '8', '2020-01-23', '2020-01-25');
+insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1355,'CNHGH','CNHKG',3,'2020-04-02','2020-04-01');
+insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1356,'JNTKO','CNHGH',4,'2020-04-04','2020-04-02');
+insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1357,'USNYC','JNTKO',5,'2020-04-05','2020-04-04');

@@ -6,6 +6,20 @@ global: {}
 replicaCount: 1
 logLevel: "debug"
 
+profiles:
+  active: ocp
+
+credentials:
+  dbusername: "cm91dGluZ21zZGI="
+  dbpassword: "cm91dGluZ21zZGI="
+  mqusername: "YXBwdXNlcg=="
+  mqpassword: "cGFzc3cwcmQ="
+
+datasources:
+  dburl: "jdbc:mysql://mysql-dev:3306/routingmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=EST"
+  mqhost: "rabbitmq-dev-headless"
+  mqport: "5672"
+
 image:
   repository: replace
   tag: replace
@@ -40,8 +54,8 @@ vcsInfo:
   repoUrl: "https://github.com/abalasu1/cargotracker-routing.git"
   branch: "master"
 
-partOf: "cargotracker-backend"
+partOf: "cargotracker-backend-dev"
 
-connectsTo: "routing-db"
+connectsTo: "mysql-dev"
 
 runtime: spring
