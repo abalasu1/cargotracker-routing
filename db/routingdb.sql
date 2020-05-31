@@ -22,6 +22,13 @@ CREATE TABLE `carrier_movement` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+##Location Table DDL
+CREATE TABLE `location` (
+`ID` int(11) DEFAULT NULL,
+`NAME` varchar(50) DEFAULT NULL,
+`UNLOCODE` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 ### Data to ensure Routing works fine ->
 insert voyage (Id,voyage_number) values(3,'0100S');
 insert voyage (Id,voyage_number) values(4,'0101S');
@@ -30,3 +37,8 @@ insert voyage (Id,voyage_number) values(5,'0102S');
 insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1355,'CNHGH','CNHKG',3,'2020-04-02','2020-04-01');
 insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1356,'JNTKO','CNHGH',4,'2020-04-04','2020-04-02');
 insert into carrier_movement (Id,arrival_location_id,departure_location_id,voyage_id,arrival_date,departure_date) values (1357,'USNYC','JNTKO',5,'2020-04-05','2020-04-04');
+
+insert into location (ID,NAME,UNLOCODE) values (1, 'China - Hongkong', 'CNHKG');
+insert into location (ID,NAME,UNLOCODE) values (2, 'China - Highland', 'CNHGH');
+insert into location (ID,NAME,UNLOCODE) values (3, 'Japan - Tokyo', 'JNTKO');
+insert into location (ID,NAME,UNLOCODE) values (4, 'USA - New York', 'USNYC');
