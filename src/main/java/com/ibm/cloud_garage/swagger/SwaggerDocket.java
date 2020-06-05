@@ -28,7 +28,7 @@ public class SwaggerDocket {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(buildApiRequestHandler())
+                .apis(RequestHandlerSelectors.basePackage("com.cargotracker"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(buildApiInfo());
